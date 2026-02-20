@@ -6,3 +6,8 @@ All notable changes to this project will be documented in this file.
 ### Добавлены
 - README, .gitignore, CHANGELOG
 - Initial repo setup
+
+## [0.1.1] - 2026-02-19
+### Добавлены
+- index.html , style.css, style.scss, script.js, package.json, package-lock.json
+- Созданны папки для стилей, ассетов, картинок и шрифтов
