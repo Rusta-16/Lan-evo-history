@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Lan-evo-history/styles/assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+body {
+  margin: 0%;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Montserrat";
+  font-size: large;
+}
+
+header {
+  box-shadow: 0px 12px 10px 1px rgba(0, 0, 0, 0.082);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.logo {
+  flex: 1 1 25%;
+}
+.logo img {
+  max-width: 50%;
+  height: auto;
+}
+
+.title {
+  flex: 1 1 50%;
+}
+.title p,
+.title h2 {
+  text-align: center;
+}
+
+.toggle_night_mode {
+  flex: 1 1 25%;
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: pointer;
+}
+.toggle_night_mode img {
+  max-width: 10%;
+  padding-right: 10vh;
+}
+
+main {
+  margin: 3% 10%;
+}
+
+.introduction h3 {
+  text-align: center;
+}
+.introduction h4 {
+  text-align: center;
+}
+.introduction p {
+  text-align: justify;
+}
+
+.card {
+  margin: 10vh 0vh 0vh 0vh;
+}
+.card h3 {
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+}
+
+.card-image {
+  flex: 1 1 50%;
+}
+.card-image img {
+  max-width: 80%;
+  height: auto;
+}
+
+.card-parametrs {
+  margin-top: 5vh;
+}
+
+.card-parametrs > * {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 10vh;
+       column-gap: 10vh;
+}/*# sourceMappingURL=style.css.map */
