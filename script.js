@@ -1,3 +1,11 @@
+const darkTheme = document.querySelector('.toggle_night_mode')
+
+darkTheme.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-theme');
+})
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const template = document.getElementById('card-template');
 

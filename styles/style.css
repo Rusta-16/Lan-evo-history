@@ -1,13 +1,27 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/Lan-evo-history/styles/assets/fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("styles/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #dddddd;
+}
+
+:root.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: white;
+}
+
 body {
   margin: 0%;
   padding: 0px;
   margin: 0px;
   font-family: "Montserrat";
   font-size: large;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
 }
 
 header {
@@ -18,36 +32,28 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.header > * {
-  flex: 1 1 0;
-  min-width: 0;
+.header .logo {
+  display: inline;
 }
-
-.logo {
-  flex: 1 1 25%;
+.header .logo img {
+  width: 10vw;
 }
-.logo img {
-  max-width: 50%;
-  height: auto;
-}
-
-.title {
+.header .title {
   flex: 1 1 50%;
-}
-.title p,
-.title h2 {
   text-align: center;
 }
-
-.toggle_night_mode {
-  flex: 1 1 25%;
+.header .toggle_night_mode {
   display: flex;
-  flex-direction: row-reverse;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
-.toggle_night_mode img {
-  max-width: 10%;
-  padding-right: 10vh;
+.header .toggle_night_mode img {
+  width: 3vw;
+}
+.header .toggle_night_mode img:hover {
+  width: 3.1vw;
+  transition: all 0.3s ease-in-out;
 }
 
 main {
