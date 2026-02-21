@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url('/Lan-evo-history/styles/assets/fonts/Montserrat-VariableFont_wght.ttf');
+    font-family: "Anton-Regular";
+    src: url(' https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows');
 }
 
 body {
     margin: 0%;
     padding: 0px;
     margin: 0px;
-    font-family: "Montserrat";
+    font-family: "Anton-Regular";
     font-size: large;
 }
 
@@ -37,9 +37,12 @@ header {
 .title {
     flex: 1 1 50%;
 
-    p,
-    h2 {
+    p, h2 {
         text-align: center;
+        font-family: "Anton-Regular", sans-serif;  
+        font-weight: 500;
+        text-transform: uppercase;           
+        letter-spacing: 1px;
     }
 }
 
@@ -75,8 +78,12 @@ main {
 
 .card {
     margin: 10vh 0vh 0vh 0vh;
+    
     h3 {
         text-align: center;
+        font-family: "Anton-Regular", sans-serif;  
+        font-weight: 600;
+        text-transform: uppercase;
     }
 }
 
@@ -86,16 +93,22 @@ main {
 
 .card-image {
     flex: 1 1 50%;
+    
     img {
         max-width: 80%;
         height: auto;
     }
 }
+
 .card-parametrs {
     margin-top: 5vh;
 }
-.card-parametrs  > *{
+
+.card-parametrs > * {
     display: flex;
     justify-content: space-between;
     column-gap: 10vh;
+    font-family: "Anton-Regular", sans-serif;  
+    font-weight: 500;
+    font-size: 1.1rem;
 }
