@@ -1,71 +1,134 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url('styles/assets/fonts/Montserrat-VariableFont_wght.ttf');
-}
-
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --border-color: #dddddd;
-}
-
-:root.dark-theme {
-    --bg-color: #1a1a1a;
-    --text-color: white;
     font-family: "Anton-Regular";
     src: url(' https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows');
 }
 
+:root {
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --card-bg: white;
+    --header-bg: white;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --accent: #c62828;
+    --param-bg: #ecf0f1;
+    --border: #ddd;
+    --mitsubishi-red: #c62828;
+    --invert: 0;
+}
+
+
 body {
-    margin: 0%;
-    padding: 0px;
-    margin: 0px;
-    font-family: "Anton-Regular";
-    font-size: large;
-    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Anton-Regular", Arial, sans-serif;
+    background: var(--bg-color);
     color: var(--text-color);
-    transition: 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: #2d2d2d;
+    --header-bg: #2d2d2d;
+    --shadow: rgba(255, 255, 255, 0.1);
+    --accent: #f44336;
+    --param-bg: #3d3d3d;
+    --border: #444;
+    --mitsubishi-red: #f44336;
+    --invert: 1;
+
+    p {
+        color: #f0f0f0;
+    }
 }
 
 header {
-    box-shadow: 0px 12px 10px 1px rgba(0, 0, 0, 0.082);
-}
+    background: var(--header-bg);
+    box-shadow: 0 4px 12px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--mitsubishi-red);
 
-.header {
-    display: flex;
-    justify-content: space-between;
-
-    .logo {
-        display: inline;
-
-
-        img {
-            width: 10vw;
-        }
-    }
-
-    p, h2 {
-        text-align: center;
-        font-family: "Anton-Regular", sans-serif;  
-        font-weight: 500;
-        text-transform: uppercase;           
-        letter-spacing: 1px;
-    }
-
-    .toggle_night_mode {
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
         display: flex;
-        border: none;
-        background: transparent;
-        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
 
-        img {
-            width: 3vw;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-            &:hover {
-                width: 3.1vw;
-                transition: all 0.3s ease-in-out;
+            .mitsubishi-logo {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 80px;
+                    height: 50px;
+                }
+            }
+
+            .site-title {
+                h1 {
+                    margin: 0;
+                    font-size: 1.8rem;
+                    color: var(--mitsubishi-red);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+
+                p {
+                    margin: 5px 0 0;
+                    font-size: 0.9rem;
+                    color: var(--text-color);
+                    opacity: 0.8;
+                }
+            }
+
+        }
+
+        #rallyArt {
+            max-width: 14vw;
+        }
+
+        .teme-group {
+            display: flex;
+            gap: 2rem;
+            border: none;
+            background: transparent;
+
+            .theme-toggle {
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 50%;
+                background: var(--param-bg);
+                transition: all 0.3s ease;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    filter: invert(var(--invert));
+                }
+
+                &:hover {
+                    transform: rotate(180deg);
+                    background: var(--accent);
+                }
+            }
+
+            a {
+                font-weight: 600;
+                cursor: pointer;
             }
         }
+
     }
 }
 
@@ -73,56 +136,239 @@ header {
 
 
 main {
-    margin: 3% 10%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+
+    .titleAndVideo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+
+        #introStart {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+
+            #s1 {
+                color: var(--mitsubishi-red);
+            }
+
+            #s2 {
+                color: #df8634;
+            }
+
+            #s3 {
+                color: var(--accent);
+            }
+
+            .block1 {
+                display: flex;
+                flex-direction: column;
+
+                video {
+                    display: block;
+                    width: 100vw;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .introduction {
+        display: block;
+        padding-bottom: 2vw;
+        margin-bottom: 5vw;
+        border-bottom: solid 1px var(--mitsubishi-red);
+
+        &:nth-child(10) {
+            border: none;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 1.7rem;
+            font-style: italic;
+        }
+
+        p {
+            word-spacing: 2px;
+            letter-spacing: 2px;
+            text-align: justify;
+            font-size: 1.5rem;
+        }
+    }
+
+    .evolution-series {
+        text-align: center;
+        margin: 3rem 0;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--mitsubishi-red) 0%, #8e0000 100%);
+        color: white;
+        border-radius: 15px;
+
+        h2 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+    }
+
+    .evolution-text {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+
+        .evolution-badge {
+            background: var(--mitsubishi-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                background: var(--accent);
+            }
+
+            &:active {
+                background: var(--accent);
+                box-shadow: 0 0 15px var(--accent);
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .card-placeholder {
+        margin: 3rem 0;
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--mitsubishi-red);
+            margin-bottom: 2rem;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px var(--shadow);
+            }
+
+            .card-header {
+                padding: 1.2rem 1.5rem;
+                background: linear-gradient(135deg, var(--mitsubishi-red) 0%, transparent 100%);
+
+                .card-title {
+                    margin: 0;
+                    font-size: 1.8rem;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-family: "Anton-Regular", Arial, sans-serif;
+                }
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: row;
+                padding: 2rem;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .card-image {
+                    flex: 1 1 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .card-img {
+                        max-width: 100%;
+                        height: auto;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.02);
+                            box-shadow: 0 10px 30px var(--shadow);
+                        }
+                    }
+                }
+
+                .card-parametrs {
+                    flex: 1 1 300px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    p {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0.8rem 1rem;
+                        margin: 0;
+                        background: var(--param-bg);
+                        border-radius: 10px;
+                        transition: all 0.3s ease;
+                        font-family: Arial, sans-serif;
+
+                        &:hover {
+                            background: var(--mitsubishi-red);
+                            color: white;
+                            transform: translateX(5px);
+
+                            .param-label {
+                                color: white;
+                            }
+                        }
+
+                        .param-label {
+                            font-weight: bold;
+                            color: var(--mitsubishi-red);
+                            font-family: "Anton-Regular", Arial, sans-serif;
+                            letter-spacing: 0.5px;
+                            background: transparent;
+
+                            &:hover {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
-.introduction {
-    h3 {
-        text-align: center;
-    }
 
-    h4 {
-        text-align: center;
-    }
-
-    p {
-        text-align: justify;
-    }
-}
-
-.card {
-    margin: 10vh 0vh 0vh 0vh;
-    
-    h3 {
-        text-align: center;
-        font-family: "Anton-Regular", sans-serif;  
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-}
-
-.card-content {
+footer {
     display: flex;
-}
-
-.card-image {
-    flex: 1 1 50%;
-    
-    img {
-        max-width: 80%;
-        height: auto;
-    }
-}
-
-.card-parametrs {
-    margin-top: 5vh;
-}
-
-.card-parametrs > * {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    column-gap: 10vh;
-    font-family: "Anton-Regular", sans-serif;  
-    font-weight: 500;
-    font-size: 1.1rem;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background: var(--header-bg);
+    border-top: 3px solid var(--mitsubishi-red);
 }
