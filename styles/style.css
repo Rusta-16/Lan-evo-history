@@ -1,101 +1,315 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("styles/assets/fonts/Montserrat-VariableFont_wght.ttf");
+  font-family: "Anton-Regular";
+  src: url(" https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows");
 }
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --border-color: #dddddd;
-}
-
-:root.dark-theme {
-  --bg-color: #1a1a1a;
-  --text-color: white;
+  --bg-color: #f5f7fa;
+  --text-color: #333;
+  --card-bg: white;
+  --header-bg: white;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --accent: #c62828;
+  --param-bg: #ecf0f1;
+  --border: #ddd;
+  --mitsubishi-red: #c62828;
+  --invert: 0;
 }
 
 body {
-  margin: 0%;
-  padding: 0px;
-  margin: 0px;
-  font-family: "Montserrat";
-  font-size: large;
-  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Anton-Regular", Arial, sans-serif;
+  background: var(--bg-color);
   color: var(--text-color);
-  transition: 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --card-bg: #2d2d2d;
+  --header-bg: #2d2d2d;
+  --shadow: rgba(255, 255, 255, 0.1);
+  --accent: #f44336;
+  --param-bg: #3d3d3d;
+  --border: #444;
+  --mitsubishi-red: #f44336;
+  --invert: 1;
+}
+body.dark-mode p {
+  color: #f0f0f0;
 }
 
 header {
-  box-shadow: 0px 12px 10px 1px rgba(0, 0, 0, 0.082);
+  background: var(--header-bg);
+  box-shadow: 0 4px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--mitsubishi-red);
 }
-
-.header {
+header .header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.header .logo {
-  display: inline;
-}
-.header .logo img {
-  width: 10vw;
-}
-.header .title {
-  flex: 1 1 50%;
-  text-align: center;
-}
-.header .toggle_night_mode {
+header .header-container .logo {
   display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .header-container .logo .mitsubishi-logo {
+  display: flex;
+  align-items: center;
+}
+header .header-container .logo .mitsubishi-logo img {
+  width: 80px;
+  height: 50px;
+}
+header .header-container .logo .site-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--mitsubishi-red);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header .header-container .logo .site-title p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+header .header-container #rallyArt {
+  max-width: 14vw;
+}
+header .header-container .teme-group {
+  display: flex;
+  gap: 2rem;
   border: none;
   background: transparent;
+}
+header .header-container .teme-group .theme-toggle {
   cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--param-bg);
+  transition: all 0.3s ease;
 }
-.header .toggle_night_mode img {
-  width: 3vw;
+header .header-container .teme-group .theme-toggle img {
+  width: 30px;
+  height: 30px;
+  filter: invert(var(--invert));
 }
-.header .toggle_night_mode img:hover {
-  width: 3.1vw;
-  transition: all 0.3s ease-in-out;
+header .header-container .teme-group .theme-toggle:hover {
+  transform: rotate(180deg);
+  background: var(--accent);
+}
+header .header-container .teme-group a {
+  font-weight: 600;
+  cursor: pointer;
 }
 
 main {
-  margin: 3% 10%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
 }
-
-.introduction h3 {
-  text-align: center;
-}
-.introduction h4 {
-  text-align: center;
-}
-.introduction p {
-  text-align: justify;
-}
-
-.card {
-  margin: 10vh 0vh 0vh 0vh;
-}
-.card h3 {
-  text-align: center;
-}
-
-.card-content {
+main .titleAndVideo {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
 }
-
-.card-image {
-  flex: 1 1 50%;
+main .titleAndVideo #introStart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.card-image img {
-  max-width: 80%;
+main .titleAndVideo #introStart #s1 {
+  color: var(--mitsubishi-red);
+}
+main .titleAndVideo #introStart #s2 {
+  color: #df8634;
+}
+main .titleAndVideo #introStart #s3 {
+  color: var(--accent);
+}
+main .titleAndVideo #introStart .block1 {
+  display: flex;
+  flex-direction: column;
+}
+main .titleAndVideo #introStart .block1 video {
+  display: block;
+  width: 100vw;
+  height: 100%;
+}
+main .introduction {
+  display: block;
+  padding-bottom: 2vw;
+  margin-bottom: 5vw;
+  border-bottom: solid 1px var(--mitsubishi-red);
+}
+main .introduction:nth-child(10) {
+  border: none;
+}
+main .introduction h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+main .introduction h4 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-style: italic;
+}
+main .introduction p {
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+main .evolution-series {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--mitsubishi-red) 0%, #8e0000 100%);
+  color: white;
+  border-radius: 15px;
+}
+main .evolution-series h2 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 5px;
+}
+main .evolution-series p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+main .evolution-text {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+main .evolution-text .evolution-badge {
+  background: var(--mitsubishi-red);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .evolution-text .evolution-badge:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+}
+main .evolution-text .evolution-badge:active {
+  background: var(--accent);
+  box-shadow: 0 0 15px var(--accent);
+  transform: scale(1.05);
+}
+main .card-placeholder {
+  margin: 3rem 0;
+}
+main .card-placeholder .card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--mitsubishi-red);
+  margin-bottom: 2rem;
+}
+main .card-placeholder .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow);
+}
+main .card-placeholder .card .card-header {
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(135deg, var(--mitsubishi-red) 0%, transparent 100%);
+}
+main .card-placeholder .card .card-header .card-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Anton-Regular", Arial, sans-serif;
+}
+main .card-placeholder .card .card-content {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+main .card-placeholder .card .card-content .card-image {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .card-placeholder .card .card-content .card-image .card-img {
+  max-width: 100%;
   height: auto;
+  transition: all 0.3s ease;
 }
-
-.card-parametrs {
-  margin-top: 5vh;
+main .card-placeholder .card .card-content .card-image .card-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px var(--shadow);
 }
-
-.card-parametrs > * {
+main .card-placeholder .card .card-content .card-parametrs {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .card-placeholder .card .card-content .card-parametrs p {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 10vh;
-       column-gap: 10vh;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin: 0;
+  background: var(--param-bg);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+main .card-placeholder .card .card-content .card-parametrs p:hover {
+  background: var(--mitsubishi-red);
+  color: white;
+  transform: translateX(5px);
+}
+main .card-placeholder .card .card-content .card-parametrs p:hover .param-label {
+  color: white;
+}
+main .card-placeholder .card .card-content .card-parametrs p .param-label {
+  font-weight: bold;
+  color: var(--mitsubishi-red);
+  font-family: "Anton-Regular", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+main .card-placeholder .card .card-content .card-parametrs p .param-label:hover {
+  background: transparent;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: var(--header-bg);
+  border-top: 3px solid var(--mitsubishi-red);
 }/*# sourceMappingURL=style.css.map */
