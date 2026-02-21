@@ -1,0 +1,24 @@
+{
+  "name": "lan-evo-history",
+  "version": "1.0.0",
+  "description": "**Команда:**\r - Тимлид: Рустам\r - Фронтендеры: Герман, Соня, Рустам\r - Дизайн: Альбина",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rusta-16/Lan-evo-history.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rusta-16/Lan-evo-history/issues"
+  },
+  "homepage": "https://github.com/Rusta-16/Lan-evo-history#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

@@ -1,3 +1,11 @@
+const darkTheme = document.querySelector('.toggle_night_mode')
+
+darkTheme.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-theme');
+})
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const template = document.getElementById('card-template');
 
@@ -30,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1395 мм.',
             'от 1170 кг до 1240 кг.',
-            '/Lan-evo-history/styles/assets/img/lan1.jpg'
+            'styles/assets/img/lan1.jpg'
         ));
     }
 
@@ -45,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1420 мм.',
             'от 1180 кг до 1250 кг.',
-            '/Lan-evo-history/styles/assets/img/lan2.jpg'
+            'styles/assets/img/lan2.jpg'
         ));
     }
 
@@ -60,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1420 мм.',
             'от 1190 кг до 1260 кг.',
-            '/Lan-evo-history/styles/assets/img/lan3.jpg'
+            '/styles/assets/img/lan3.jpg'
         ));
     }
 
@@ -75,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1690 мм.',
             '1415 мм.',
             'от 1260 кг до 1350 кг.',
-            '/Lan-evo-history/styles/assets/img/lan4.jpg'
+            'styles/assets/img/lan4.jpg'
         ));
     }
 
@@ -90,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1415 мм.',
             'от 1260 кг до 1360 кг.',
-            '/Lan-evo-history/styles/assets/img/lan5.jpg'
+            'styles/assets/img/lan5.jpg'
         ));
     }
 
@@ -105,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1415 мм.',
             'от 1260 кг до 1360 кг.',
-            '/Lan-evo-history/styles/assets/img/lan6.jpg'
+            'styles/assets/img/lan6.jpg'
         ));
     }
 
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1400 кг.',
-            '/Lan-evo-history/styles/assets/img/lan7.jpg'
+            'styles/assets/img/lan7.jpg'
         ));
     }
 
@@ -135,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1410 кг.',
-            '/Lan-evo-history/styles/assets/img/lan8.jpg'
+            'styles/assets/img/lan8.jpg'
         ));
     }
 
@@ -150,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1490 кг.',
-            '/Lan-evo-history/styles/assets/img/lan9.jpg'
+            'styles/assets/img/lan9.jpg'
         ));
     }
 
@@ -165,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '1810 мм.',
             '1480 мм.',
             'от 1320 кг до 1490 кг.',
-            '/Lan-evo-history/styles/assets/img/lan10.jpg'
+            'styles/assets/img/lan10.jpg'
         ));
     }
 });
