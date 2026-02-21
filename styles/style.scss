@@ -44,11 +44,12 @@ header {
         }
     }
 
-    p, h2 {
+    p,
+    h2 {
         text-align: center;
-        font-family: "Anton-Regular", sans-serif;  
+        font-family: "Anton-Regular", sans-serif;
         font-weight: 500;
-        text-transform: uppercase;           
+        text-transform: uppercase;
         letter-spacing: 1px;
     }
 
@@ -92,10 +93,10 @@ main {
 
 .card {
     margin: 10vh 0vh 0vh 0vh;
-    
+
     h3 {
         text-align: center;
-        font-family: "Anton-Regular", sans-serif;  
+        font-family: "Anton-Regular", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
     }
@@ -107,7 +108,7 @@ main {
 
 .card-image {
     flex: 1 1 50%;
-    
+
     img {
         max-width: 80%;
         height: auto;
@@ -118,11 +119,11 @@ main {
     margin-top: 5vh;
 }
 
-.card-parametrs > * {
+.card-parametrs>* {
     display: flex;
     justify-content: space-between;
     column-gap: 10vh;
-    font-family: "Anton-Regular", sans-serif;  
+    font-family: "Anton-Regular", sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
 }
