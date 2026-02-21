@@ -6,46 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitsubishi Lancer - История культовой японской модели</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <span class="logo">
-                <img src="styles/assets/img/1280px-Mitsubishi-logo.png" alt="">
-            </span>
-            <span class="title">
-                <h2>Легенда ралли: Mitsubishi Lancer Evolution 1-10</h3>
-                    <p>От дебюта в WRC до финала Evo X</p>
-            </span>
-            <button class="toggle_night_mode">
-                <img src="styles/assets/img/night-mode-svgrepo-com.svg" alt="">
+        <div class="header-container">
+            <div class="logo">
+                <div class="mitsubishi-logo">
+                    <img src="styles/assets/img/1280px-Mitsubishi-logo.png" alt="Mitsubishi">
+                </div>
+                <div class="site-title">
+                    <h1>MITSUBISHI</h1>
+                    <p>LANCER EVOLUTION</p>
+                    <p>Для коммита</p>
+                </div>
+            </div>
+            <img src="styles/assets/img/RallyArt.png" alt="" id="rallyArt">
+            <button class="teme-group">
+                <div class="theme-toggle" id="themeToggle">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z'/%3E%3C/svg%3E"
+                        alt="theme toggle">
+                </div>
+                <p>switch theme</p>
             </button>
+
         </div>
     </header>
     <main>
-        <span class="introduction">
-            <h3>Время побед, слез счастья, дружбы и вечной эволюции</h3>
-            <p>Mitsubishi Lancer Evolution – спортивная версия популярной модели Lancer. Также известна как “Evo”. За
-                всю историю своего существования классическим почерком этого японского спортивного авто являлся
-                2.0-литровый турбированный бензиновый мотор и полный привод. Lancer Evolution имеет столько же
-                генераций, сколько и обычный Лансер. По сути, с появлением нового поколения модели, на рынок выходила и
-                его заряженная спецификация.</p>
-            <p>Однако, несмотря на соответствие количества генераций, выпуск заряженной версии Mitsubishi Lancer
-                Evolution был начат лишь в 1992 году. Автомобиль базировался на той же самой платформе, что и обычный
-                Lancer и имел схожий кузов, просто с обвесами и спойлерами. До 1998 года Lancer ввозился в Европу только
-                “серыми” дилерами, затем была организована официальная поставка заряженных Лансеров. Все шесть лет с
-                момента выпуска и до 1998 года автомобиль продавался официально исключительно в Японии.</p>
+        <div class="titleAndVideo">
+            <div class="introduction" id="introStart">
+                <div class="block1">
+                    <h3>Время <span id="s1">побед</span>, слез счастья, <span id="s2">дружбы</span> и вечной <span
+                            id="s3">эволюции</span></h3>
+                    <p><b>Mitsubishi Lancer Evolution</b> – спортивная версия популярной модели Lancer. Также известна
+                        как
+                        “Evo”. За
+                        всю историю своего существования классическим почерком этого японского спортивного авто являлся
+                        2.0-литровый турбированный бензиновый мотор и полный привод. Lancer Evolution имеет столько же
+                        генераций, сколько и обычный Лансер. По сути, с появлением нового поколения модели, на рынок
+                        выходила и
+                        его заряженная спецификация.</p>
+                    <p>Однако, несмотря на соответствие количества генераций, выпуск заряженной версии Mitsubishi Lancer
+                        Evolution был начат лишь в 1992 году. Автомобиль базировался на той же самой платформе, что и
+                        обычный
+                        Lancer и имел схожий кузов, просто с обвесами и спойлерами. До 1998 года Lancer ввозился в
+                        Европу
+                        только
+                        “серыми” дилерами, затем была организована официальная поставка заряженных Лансеров. Все шесть
+                        лет с
+                        момента выпуска и до 1998 года автомобиль продавался официально исключительно в Японии.</p>
+                </div>
+                <video autoplay loop muted playsinline>
+                    <source
+                        src="styles/assets/video/Mitsubishi Lancer Evo VI RALLY ACTION - PURE SOUND Christian Kornherr [get.gt].mp4"
+                        type="video/mp4">
+                </video>
+                <div>
+                    <h4>История Легенды Mitsubishi Lancer Evolution</h4>
 
-            <h4>История Легенды Mitsubishi Lancer Evolution</h4>
+                    <p>Основным конкурентом Lancer Evolution выступает другой японский спорт-кар — Subaru Impreza WRX.
+                        Между
+                        конкурентами существует внегласное соглашение – не делать мотор заряженных версий по мощности
+                        больше
+                        276
+                        “лошадей”. Версии, которые превосходят этот предел, в борьбе за потребителя не участвуют, таким
+                        образом,
+                        производители меряются не количеством лошадиных сил, а производительностью своих моторов.
 
-            <p>Основным конкурентом Lancer Evolution выступает другой японский спорт-кар — Subaru Impreza WRX. Между
-                конкурентами существует внегласное соглашение – не делать мотор заряженных версий по мощности больше 276
-                “лошадей”. Версии, которые превосходят этот предел, в борьбе за потребителя не участвуют, таким образом,
-                производители меряются не количеством лошадиных сил, а производительностью своих моторов.
+                        Впрочем, давайте немного окунемся в историю создания версии Evolution. Как все начиналось?</p>
+                </div>
+                <img src="styles/assets/img/RallyArt1jpg.jpg" alt="">
 
-                Впрочем, давайте немного окунемся в историю создания версии Evolution. Как все начиналось?</p>
-        </span>
+            </div>
+        </div>
+
+        <div class="evolution-text" id="evolutionBadges">
+            <button id="evolution-badge1" class="evolution-badge" data-evo="1">EVO I</button>
+            <button id="evolution-badge2" class="evolution-badge" data-evo="2">EVO II</button>
+            <button id="evolution-badge3" class="evolution-badge" data-evo="3">EVO III</button>
+            <button id="evolution-badge4" class="evolution-badge" data-evo="4">EVO IV</button>
+            <button id="evolution-badge5" class="evolution-badge" data-evo="5">EVO V</button>
+            <button id="evolution-badge6" class="evolution-badge" data-evo="6">EVO VI</button>
+            <button id="evolution-badge7" class="evolution-badge" data-evo="7">EVO VII</button>
+            <button id="evolution-badge8" class="evolution-badge" data-evo="8">EVO VIII</button>
+            <button id="evolution-badge9" class="evolution-badge" data-evo="9">EVO IX</button>
+            <button id="evolution-badge10" class="evolution-badge" data-evo="10">EVO X</button>
+        </div>
+
+        <div class="evolution-series">
+            <h2>LANCER EVOLUTION</h2>
+            <p>1992 - 2016 • Легенда мирового ралли</p>
+        </div>
+
+        <div class="card-placeholder" id="placeholder1"></div>
         <span class="introduction">
             <h3>Первое поколение</h3>
             <p>Mitsubishi Lancer Evolution I был представлен в 1992 году, его главной задачей было участие на мировом
@@ -58,8 +115,8 @@
                 типичного уличного автомобиля. Mitsubishi Lancer Evolution I выпускали с октября 1992 года по январь
                 1994 года. Было продано около 5000 экземпляров за период с 1992 по 1993 годы.</p>
         </span>
-        <div class="card-placeholder" id="placeholder1"></div>
 
+        <div class="card-placeholder" id="placeholder2"></div>
         <span class="introduction">
             <h3>Второе поколение</h3>
             <p>После успеха Mitsubishi Lancer Evolution I, в декабре 1994 года вышла более усовершенствованная
@@ -71,8 +128,8 @@
                 252-сильная версия внушала доверие у потребителя.Так же как и его предшественник, Mitsubishi Lancer
                 Evolution II доступен в двух вариантах – GSR и RS.</p>
         </span>
-        <div class="card-placeholder" id="placeholder2"></div>
 
+        <div class="card-placeholder" id="placeholder3"></div>
         <span class="introduction">
             <h3>Третье поколение</h3>
             <p>Январь 1995 года был характерен появлением нового витка эволюции — Mitsubishi Lancer Evolution III.
@@ -84,8 +141,8 @@
                 повысить компрессию в цилиндрах до 9. Это дало прирост в 10 л.с. (7 кВт). Mitsubishi Lancer Evolution
                 III GSR и RS использовали те же самые 5 ступенчатые механические КПП.</p>
         </span>
-        <div class="card-placeholder" id="placeholder3"></div>
 
+        <div class="card-placeholder" id="placeholder4"></div>
         <span class="introduction">
             <h3>Четвертое поколение</h3>
             <p>Платформа Mitsubishi Lancer Evolution была полностью изменена в 1996 году, а вместе с ней и Mitsubishi
@@ -97,8 +154,8 @@
                 форму треугольника и занимает большую часть крышки багажника. Производство Mitsubishi Lancer Evolution
                 IV закончилось в январе 1998 года.</p>
         </span>
-        <div class="card-placeholder" id="placeholder4"></div>
 
+        <div class="card-placeholder" id="placeholder5"></div>
         <span class="introduction">
             <h3>Пятое поколение</h3>
             <p>В 1997 году произошли изменения на чемпионате мира по ралли (WRC) в классификации. Концерн Mitsubishi,
@@ -110,8 +167,8 @@
                 областях, поршни стали легче, турбонагнетатель был снова улучшен. Mitsubishi Lancer Evolution V в январе
                 1998 года сошел с конвейера и выпускался год, до января 1999 года.</p>
         </span>
-        <div class="card-placeholder" id="placeholder5"></div>
 
+        <div class="card-placeholder" id="placeholder6"></div>
         <span class="introduction">
             <h3>Шестое поколение</h3>
             <p>В 1999 году появляется Mitsubishi Lancer Evolution VI. Конструкторы Mitsubishi Lancer Evolution VI
@@ -129,8 +186,8 @@
                 с деколями, отображающими оформление раллийного автомобиля гонщика. Mitsubishi Lancer Evolution VI
                 продолжал выпускаться до марта 2001 года.</p>
         </span>
-        <div class="card-placeholder" id="placeholder6"></div>
 
+        <div class="card-placeholder" id="placeholder7"></div>
         <span class="introduction">
             <h3>Седьмое поколение</h3>
             <p>Mitsubishi Lancer Evolution VII сменяет шестое поколение в марте 2001 года. Mitsubishi вынуждена была
@@ -145,8 +202,8 @@
                 приборы для слежения за работой двигателя. В версии Mitsubishi Lancer Evolution VII GT-A, была
                 использована автомотическая коробка передач, которую иногда называют Lancer Evolution 7.5.</p>
         </span>
-        <div class="card-placeholder" id="placeholder7"></div>
 
+        <div class="card-placeholder" id="placeholder8"></div>
         <span class="introduction">
             <h3>Восьмое поколение</h3>
             <p>Mitsubishi Lancer Evolution подвергся изменениям в 2003 году. Особенностью нового Mitsubishi Lancer
@@ -162,8 +219,8 @@
                 урезаны по сравнению с японской модификацией. В американском варианте отсутствует думающая трансмиссия
                 Mitsubishi Lancer Evolution VIII – Super Active Yaw Control.</p>
         </span>
-        <div class="card-placeholder" id="placeholder8"></div>
 
+        <div class="card-placeholder" id="placeholder9"></div>
         <span class="introduction">
             <h3>Девятое поколение</h3>
             <p>3-ого марта 2005 года на Женевском Мотто Шоу в Японии, для Европейского рынка, был продемонстрирован
@@ -182,8 +239,8 @@
                 Lancer Evolution IX стала легче. Mitsubishi Lancer Evolution IX стала комфортабельнее, фирменные сиденья
                 Recaro обшиты кожей и алькантарой.</p>
         </span>
-        <div class="card-placeholder" id="placeholder9"></div>
 
+        <div class="card-placeholder" id="placeholder10"></div>
         <span class="introduction">
             <h3>Десятое поколение</h3>
             <p>В 2005 году компания Mitsubishi предложила концептуальный вариант нового поколения Mitsubishi Lancer
@@ -205,23 +262,13 @@
                 просторным и удобным. Mitsubishi Lancer Evolution X пошли на продажу 1 октября 2007 года в Японии, а
                 затем в январе 2008 года в США.</p>
         </span>
-        <div class="card-placeholder" id="placeholder10"></div>
-
-
-
-
-
-
-
-
-
-
-
 
 
         <template id="card-template">
             <div class="card">
-                <h3 class="card-title">Заголовок по умолчанию</h3>
+                <div class="card-header">
+                    <h3 class="card-title">Заголовок по умолчанию</h3>
+                </div>
                 <div class="card-content">
                     <div class="card-image">
                         <img src="photo.jpg" alt="lanevo" class="card-img">
@@ -237,13 +284,17 @@
                         <p><span class="param-label">Ширина:</span> <span class="card-carwidth">Ширина авто</span></p>
                         <p><span class="param-label">Высота:</span> <span class="card-carheight">Высота авто</span></p>
                         <p><span class="param-label">Вес:</span> <span class="card-weight">Вес авто</span></p>
+                        <p><span class="param-label">Год:</span> <span class="card-year">Год выпуска</span></p>
+
                     </div>
                 </div>
             </div>
         </template>
     </main>
     <footer>
-
+        <p>© 2026 Lan-evo-history</p>
+        <p style="opacity: 0.6; font-size: 0.9rem;">Легенда о Mitsubishi Lancer Evolution</p>
+        <p>Created by: Sony, German, Albina, Rbutton</p>
     </footer>
     <script src="script.js"></script>
 </body>

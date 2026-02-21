@@ -1,15 +1,7 @@
-const darkTheme = document.querySelector('.toggle_night_mode')
-
-darkTheme.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark-theme');
-})
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const template = document.getElementById('card-template');
 
-    function createCard(title, carplatform, carengine, wheelbase, carlength, carwidth, carheight, weight, imageSrc) {
+    function createCard(title, carplatform, carengine, wheelbase, carlength, carwidth, carheight, weight, year, imageSrc) {
         const clone = template.content.cloneNode(true);
         const img = clone.querySelector('.card-img');
         if (img) {
@@ -24,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clone.querySelector('.card-carwidth').textContent = carwidth;
         clone.querySelector('.card-carheight').textContent = carheight;
         clone.querySelector('.card-weight').textContent = weight;
+        clone.querySelector('.card-year').textContent = year
         return clone;
     }
 
@@ -38,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1395 мм.',
             'от 1170 кг до 1240 кг.',
-            'styles/assets/img/lan1.jpg'
+            '1992-1993',
+            'styles/assets/img/lan1.png'
         ));
     }
 
@@ -53,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1420 мм.',
             'от 1180 кг до 1250 кг.',
-            'styles/assets/img/lan2.jpg'
+            '1993-1994',
+            'styles/assets/img/lan2.png'
         ));
     }
 
@@ -68,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1695 мм.',
             '1420 мм.',
             'от 1190 кг до 1260 кг.',
-            '/styles/assets/img/lan3.jpg'
+            '1995',
+            '/styles/assets/img/lan3.png'
         ));
     }
 
@@ -83,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1690 мм.',
             '1415 мм.',
             'от 1260 кг до 1350 кг.',
-            'styles/assets/img/lan4.jpg'
+            '1996-1997',
+            'styles/assets/img/lan4.png'
         ));
     }
 
@@ -98,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1415 мм.',
             'от 1260 кг до 1360 кг.',
-            'styles/assets/img/lan5.jpg'
+            '1998',
+            'styles/assets/img/lan5.png'
         ));
     }
 
@@ -113,7 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1415 мм.',
             'от 1260 кг до 1360 кг.',
-            'styles/assets/img/lan6.jpg'
+            '1999-2000',
+            'styles/assets/img/lan6.png'
         ));
     }
 
@@ -128,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1400 кг.',
-            'styles/assets/img/lan7.jpg'
+            '2001-2002',
+            'styles/assets/img/lan7.png'
         ));
     }
 
@@ -143,7 +143,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1410 кг.',
-            'styles/assets/img/lan8.jpg'
+            '2003-2005',
+            'styles/assets/img/lan8.png'
         ));
     }
 
@@ -158,7 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '1770 мм.',
             '1450 мм.',
             'от 1320 кг до 1490 кг.',
-            'styles/assets/img/lan9.jpg'
+            '2005-2007',
+            'styles/assets/img/lan9.png'
         ));
     }
 
@@ -173,7 +175,95 @@ document.addEventListener('DOMContentLoaded', function () {
             '1810 мм.',
             '1480 мм.',
             'от 1320 кг до 1490 кг.',
-            'styles/assets/img/lan10.jpg'
+            '2007-2016',
+            'styles/assets/img/lan10.png'
         ));
     }
 });
+
+const darkTheme = document.querySelector('.teme-group')
+
+darkTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+})
+
+$(document).ready(function () {
+    $('#evolution-badge1').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 2600
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge2').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 3700
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge3').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 4800
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge4').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 5950
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge5').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 7000
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge6').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 8150
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge7').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 9450
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge8').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 10650
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge9').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 11850
+        }, 1300)
+    })
+})
+$(document).ready(function () {
+    $('#evolution-badge10').on('click', function (e) {
+        e.preventDefault()
+        $('html,body').animate({
+            scrollTop: 13150
+        }, 1300)
+    })
+})  
