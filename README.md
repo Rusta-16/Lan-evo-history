@@ -9,7 +9,6 @@
 | Светлая тема | Тёмная тема |
 |:---:|:---:|
 | ![light](./styles/assets/preview-light.png) | ![dark](./styles/assets/preview-dark.png) |
-|:---:|:---:|
 | ![light](./styles/assets/preview-light2.png) | ![dark](./styles/assets/preview-dark2.png) |
 ---
 
