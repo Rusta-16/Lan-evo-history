@@ -90,12 +90,12 @@
 |---|---|---|
 - Telegram: [@papugator](https://t.me)
 - Почта: skylinear228@gmail.com
-- GitHub: [@papugator](https://github.com)
+- GitHub: [@papugator](https://github.com/Papugator)
   
 | **Frontend** | Соня | Вёрстка секций поколений, разработка дизайна, поиск и структуризация информации, работа со стилями и анимацией, автор идеи основной структуры |
 |---|---|---|
 - Telegram: @sonia.zoteeva
-- GitHub:[SofiAS1221]() 
+- GitHub:[@SofiAS1221](https://github.com/SofiAS1221) 
 
 | **UI/UX дизайн** | Альбина | Проектирование визуальной концепции лонгрида, дизайн-система, типографика |
 |---|---|---|
